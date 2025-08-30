@@ -1,0 +1,235 @@
+.pitopo-container {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.pitopo-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.filters-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filters-container input,
+.filters-container select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.pitopo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.pitopo-table th,
+.pitopo-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.pitopo-table th {
+    background-color: #C3B090;
+}
+
+.no-data {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+/* Status Tags */
+.status-tag {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.status-tag.open {
+    background-color: #e6f7e6;
+    color: #2e7d32;
+    border: 1px solid #2e7d32;
+}
+
+.status-tag.in-progress {
+    background-color: #fff3e0;
+    color: #f57c00;
+    border: 1px solid #f57c00;
+}
+
+.status-tag.closed {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #c62828;
+}
+
+.status-tag.default {
+    background-color: #e0e0e0;
+    color: #424242;
+    border: 1px solid #424242;
+}
+.filters-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.filter-box {
+    display: flex;
+    align-items: center;
+    background: #f7f9fc;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 4px 8px;
+    min-width:150px;
+}
+
+.filter-icon {
+    margin-right: 6px;
+    font-size: 16px;
+    color: #007bff; /* blue accent */
+}
+
+.filter-box select {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    padding: 4px;
+}
+.table-container {
+    width: 100%;
+    max-height: 70vh; /* table scrolls vertically */
+    overflow-x: auto; /* horizontal scroll for many columns */
+    overflow-y: auto; /* vertical scroll */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Optional: make header sticky */
+.pitopo-table thead th {
+    position: sticky;
+    top: 0;
+    background: #C3B090; /* same as header bg */
+    z-index: 2;
+}
+.action-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+
+.add-new, .export {
+    margin-left: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-new:hover, .export:hover {
+    background-color: #0056b3;
+}
+
+/* Popup Modal Styles */
+.popup-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 100px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-actions button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+.form-actions button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.form-actions button[type="button"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+.form-actions button[type="button"]:hover {
+    background-color: #c82333;
+}

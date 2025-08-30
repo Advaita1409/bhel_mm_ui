@@ -1,0 +1,28 @@
+:root{
+    --bg: #f6f8fb;
+    --panel: #ffffff;
+    --panel-2: #f0f3f8;
+    --text: #0f172a;       /* slate-900 */
+    --text-2: #334155;     /* slate-700 */
+    --muted: #64748b;      /* slate-500 */
+    --line: #e2e8f0;       /* slate-200 */
+    --brand: #1f4ea3;      /* muted corporate blue */
+    --brand-2: #2a61c5;
+    --brand-3: #d8e3ff;
+    --good: #15803d;
+    --warn: #a16207;
+    --bad:  #b91c1c;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 12px 24px rgba(16,24,40,.06);
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--text);
+    background: var(--bg);
+}
+h1, h2, h3 { margin: 0 0 .5rem; }
+p { margin: 0 0 1rem; color: var(--text-2); }
+button { font: inherit; }

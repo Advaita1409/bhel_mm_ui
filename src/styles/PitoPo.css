@@ -1,241 +1,310 @@
+/* Tailwind CSS base styles */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Custom styles for PitoPo component */
 .pitopo-container {
-    padding: 10px;
-    font-family: Arial, sans-serif;
+    @apply max-w-full mx-auto p-3 bg-gray-50 min-h-screen;
+    font-family: 'Inter', sans-serif;
 }
 
+/* Title styling */
 .pitopo-title {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
+    @apply text-xl font-bold text-gray-800 mb-3 text-center;
 }
 
+/* Filters wrapper */
+.filters-wrapper {
+    @apply bg-blue-100 p-3 rounded-lg shadow-sm mb-4;
+}
+
+/* Filters container */
 .filters-container {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+    @apply grid grid-cols-8 gap-2;
 }
 
-.filters-container input,
-.filters-container select {
-    padding: 8px 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-    flex: 1;
-    min-width: 150px;
+/* MUI Select styling */
+.MuiSelect-root {
+    @apply text-sm h-7;
 }
 
-.pitopo-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    border-radius: 8px;
+.MuiInputLabel-root {
+    @apply text-xs font-medium text-gray-700;
+    transform: translate(14px, 6px) scale(1);
 }
 
-.pitopo-table th,
-.pitopo-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-    font-size: 14px;
+.MuiInputLabel-shrink {
+    transform: translate(14px, -6px) scale(0.75);
 }
 
-.pitopo-table th {
-    background-color: #C3B090;
+.MuiInputBase-root {
+    @apply border-gray-300 rounded-md;
 }
 
-.no-data {
-    text-align: center;
-    padding: 20px;
-    color: #666;
-}
-
-/* Status Tags */
-.status-tag {
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 12px;
-    font-weight: bold;
-    display: inline-block;
-}
-
-.status-tag.open {
-    background-color: #e6f7e6;
-    color: #2e7d32;
-    border: 1px solid #2e7d32;
-}
-
-.status-tag.in-progress {
-    background-color: #fff3e0;
-    color: #f57c00;
-    border: 1px solid #f57c00;
-}
-
-.status-tag.closed {
-    background-color: #ffebee;
-    color: #c62828;
-    border: 1px solid #c62828;
-}
-
-.status-tag.default {
-    background-color: #e0e0e0;
-    color: #424242;
-    border: 1px solid #424242;
-}
-.filters-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-}
-
-.filter-box {
-    display: flex;
-    align-items: center;
-    background: #f7f9fc;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 4px 8px;
-    min-width:150px;
-}
-
-.filter-icon {
-    margin-right: 6px;
-    font-size: 16px;
-    color: #007bff; /* blue accent */
-}
-
-.filter-box select {
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 14px;
-    padding: 4px;
-}
-.table-container {
-    width: 100%;
-    max-height: 70vh; /* table scrolls vertically */
-    overflow-x: auto; /* horizontal scroll for many columns */
-    overflow-y: auto; /* vertical scroll */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-/* Optional: make header sticky */
-.pitopo-table thead th {
-    position: sticky;
-    top: 0;
-    background: #C3B090; /* same as header bg */
-    z-index: 2;
-}
+/* Buttons */
 .action-btn {
-    cursor: pointer;
-    background: none;
-    border: none;
-    font-size: 16px;
+    @apply px-2 py-1 rounded-md font-medium text-sm transition-all duration-200 shadow-sm h-7;
 }
 
-.add-new, .export {
-    margin-left: 10px;
-    padding: 8px 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.action-btn.add-new {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
 }
 
-.add-new:hover, .export:hover {
-    background-color: #0056b3;
+.action-btn.export {
+    @apply bg-green-600 text-white hover:bg-green-700;
 }
 
-/* Popup Modal Styles */
-.popup-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+.action-btn.clear-filters {
+    @apply border-blue-600 text-blue-600 hover:bg-blue-50;
 }
 
-.popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 800px;
-    max-height: 80vh;
-    overflow-y: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Table container */
+.table-container {
+    @apply bg-white rounded-lg shadow-lg max-h-[600px] overflow-auto;
 }
 
-.popup-content h2 {
-    margin-bottom: 20px;
-    text-align: center;
+/* Table styling */
+.MuiTable-root {
+    @apply w-full border border-gray-300;
 }
 
-.form-group {
-    margin-bottom: 15px;
+/* Table head */
+.MuiTableHead-root {
+    @apply bg-gray-100 sticky top-0 z-10;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+/* Table header and cells */
+.table-header,
+.MuiTableCell-root {
+    @apply px-2 py-1 text-xs text-gray-600 border border-gray-300;
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+/* Column group colors */
+.table-header[data-group="1"],
+.MuiTableCell-root[data-group="1"] {
+    background-color: #E3F2FD; /* Light Blue */
 }
 
-.form-group textarea {
-    height: 100px;
+.table-header[data-group="2"],
+.MuiTableCell-root[data-group="2"] {
+    background-color: #E8F5E9; /* Light Green */
 }
 
-.form-actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
+.table-header[data-group="3"],
+.MuiTableCell-root[data-group="3"] {
+    background-color: #FFFDE7; /* Light Yellow */
 }
 
-.form-actions button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.table-header[data-group="4"],
+.MuiTableCell-root[data-group="4"] {
+    background-color: #F3E5F5; /* Light Purple */
 }
 
-.form-actions button[type="submit"] {
-    background-color: #28a745;
-    color: white;
+.table-header[data-group="5"],
+.MuiTableCell-root[data-group="5"] {
+    background-color: #FFF3E0; /* Light Orange */
 }
 
-.form-actions button[type="submit"]:hover {
-    background-color: #218838;
+.table-header[data-group="actions"],
+.MuiTableCell-root[data-group="actions"] {
+    background-color: #F5F5F5; /* Default for actions */
 }
 
-.form-actions button[type="button"] {
-    background-color: #dc3545;
-    color: white;
+/* Striped rows */
+.table-row-even {
+    @apply bg-white;
 }
 
-.form-actions button[type="button"]:hover {
-    background-color: #c82333;
+.table-row-odd {
+    @apply bg-gray-50;
 }
 
-.popup-content {
-    width: 80vw;
-    height: 80vh;
-    overflow-y: auto; /* Ensure scrollability if content overflows */
+/* Hover effect */
+.MuiTableRow-root:hover {
+    @apply bg-gray-100;
+}
+
+/* Action icon (Edit button) */
+.MuiIconButton-root {
+    @apply hover:bg-blue-100 p-1;
+}
+
+/* Chip styling for Status */
+.MuiChip-root {
+    @apply text-xs font-medium h-6;
+}
+
+/* Pagination */
+.MuiPagination-root {
+    @apply flex justify-center mt-3;
+}
+
+.MuiPaginationItem-root {
+    @apply mx-1 px-2 py-1 rounded-md text-gray-700 hover:bg-blue-100 text-sm;
+}
+
+.Mui-selected {
+    @apply bg-blue-600 text-white;
+}
+
+/* Dialog styling */
+.MuiDialog-paper {
+    @apply p-3 rounded-lg;
+}
+
+.MuiDialogTitle-root {
+    @apply bg-blue-600 text-white rounded-t-md text-sm font-semibold py-2;
+}
+
+.MuiDialogContent-root {
+    @apply bg-white p-3;
+}
+
+/* Form section styling */
+.form-section {
+    @apply mb-6 p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-200;
+}
+
+/* Form section title styling */
+.form-section-title {
+    @apply text-sm font-semibold text-gray-800 py-3 px-4 mb-3 rounded-md border-b-2 border-gray-300 shadow-sm;
+}
+
+.form-section-title.bg-blue-100 {
+    @apply bg-blue-100 text-blue-800 border-blue-300;
+}
+
+.form-section-title.bg-green-100 {
+    @apply bg-green-100 text-green-800 border-green-300;
+}
+
+.form-section-title.bg-yellow-100 {
+    @apply bg-yellow-100 text-yellow-800 border-yellow-300;
+}
+
+.form-section-title.bg-purple-100 {
+    @apply bg-purple-100 text-purple-800 border-purple-300;
+}
+
+.form-section-title.bg-orange-100 {
+    @apply bg-orange-100 text-orange-800 border-orange-300;
+}
+
+/* Mantine TextInput and DateInput styling */
+.mantine-TextInput-root,
+.mantine-DateInput-root {
+    @apply mb-1.5 w-full;
+}
+
+.mantine-TextInput-input,
+.mantine-DateInput-input {
+    @apply text-xs h-8 rounded-full border-gray-300 bg-gray-100;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    padding: 0 12px;
+}
+
+.mantine-TextInput-label,
+.mantine-DateInput-label {
+    @apply text-xs font-medium text-gray-700 mb-1;
+}
+
+.mantine-TextInput-description,
+.mantine-DateInput-description {
+    @apply text-xs text-gray-500 mb-1;
+}
+
+.mantine-TextInput-wrapper,
+.mantine-DateInput-wrapper {
+    @apply relative;
+}
+
+.mantine-TextInput-asterisk {
+    @apply text-red-500;
+}
+
+/* Disable default Mantine filled variant hover effect */
+.mantine-TextInput-input:hover,
+.mantine-DateInput-input:hover {
+    @apply bg-gray-100;
+}
+
+/* Multiline input for Remarks */
+.mantine-TextInput-input[data-multiline] {
+    @apply h-8;
+    padding: 6px 12px;
+}
+
+/* Form buttons */
+.MuiButton-root {
+    @apply px-2 py-1 rounded-md font-medium text-sm transition-all duration-200;
+}
+
+.MuiButton-contained {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.MuiButton-outlined {
+    @apply border-blue-600 text-blue-600 hover:bg-blue-50;
+}
+
+/* Snackbar */
+.MuiSnackbar-root {
+    @apply bottom-4 right-4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .filters-container {
+        @apply grid-cols-2;
+    }
+
+    .table-header,
+    .MuiTableCell-root {
+        @apply px-1 py-0.5 text-xs;
+    }
+
+    .pitopo-title {
+        @apply text-lg;
+    }
+
+    .MuiDialog-paper {
+        @apply p-2;
+    }
+
+    .mantine-TextInput-input,
+    .mantine-DateInput-input {
+        @apply text-xs h-7;
+    }
+
+    .mantine-TextInput-input[data-multiline] {
+        @apply h-7;
+        padding: 5px 10px;
+    }
+
+    .mantine-TextInput-label,
+    .mantine-DateInput-label {
+        @apply text-xs;
+    }
+
+    .mantine-TextInput-description,
+    .mantine-DateInput-description {
+        @apply text-xs;
+    }
+
+    .action-btn {
+        @apply text-xs h-6;
+    }
+
+    .form-section {
+        @apply mb-4 p-3;
+    }
+
+    .form-section-title {
+        @apply text-xs py-2 px-3 mb-2;
+    }
 }

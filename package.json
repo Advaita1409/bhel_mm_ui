@@ -10,6 +10,7 @@
     "@mantine/hooks": "^8.2.8",
     "@mui/icons-material": "^7.3.2",
     "@mui/x-data-grid": "^8.11.1",
+    "@mui/x-date-pickers": "^8.11.1",
     "@tabler/icons-react": "^3.34.1",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",

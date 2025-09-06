@@ -164,79 +164,30 @@
     @apply bg-white p-3;
 }
 
-/* Form section styling */
-.form-section {
-    @apply mb-6 p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-200;
+/* Form inputs in dialog */
+.MuiDialogContent-root .MuiTextField-root {
+    @apply mb-1.5;
 }
 
-/* Form section title styling */
-.form-section-title {
-    @apply text-sm font-semibold text-gray-800 py-3 px-4 mb-3 rounded-md border-b-2 border-gray-300 shadow-sm;
-}
-
-.form-section-title.bg-blue-100 {
-    @apply bg-blue-100 text-blue-800 border-blue-300;
-}
-
-.form-section-title.bg-green-100 {
-    @apply bg-green-100 text-green-800 border-green-300;
-}
-
-.form-section-title.bg-yellow-100 {
-    @apply bg-yellow-100 text-yellow-800 border-yellow-300;
-}
-
-.form-section-title.bg-purple-100 {
-    @apply bg-purple-100 text-purple-800 border-purple-300;
-}
-
-.form-section-title.bg-orange-100 {
-    @apply bg-orange-100 text-orange-800 border-orange-300;
-}
-
-/* Mantine TextInput and DateInput styling */
-.mantine-TextInput-root,
-.mantine-DateInput-root {
-    @apply mb-1.5 w-full;
-}
-
-.mantine-TextInput-input,
-.mantine-DateInput-input {
-    @apply text-xs h-8 rounded-full border-gray-300 bg-gray-100;
+.MuiDialogContent-root .MuiInputBase-root {
+    @apply text-xs h-8 rounded-md border-gray-300;
     font-size: 0.75rem;
     line-height: 1.2;
-    padding: 0 12px;
+    padding: 0 8px;
 }
 
-.mantine-TextInput-label,
-.mantine-DateInput-label {
-    @apply text-xs font-medium text-gray-700 mb-1;
+.MuiDialogContent-root .MuiInputBase-multiline {
+    @apply h-8 overflow-hidden;
+    padding: 6px 8px;
 }
 
-.mantine-TextInput-description,
-.mantine-DateInput-description {
-    @apply text-xs text-gray-500 mb-1;
+.MuiDialogContent-root .MuiInputLabel-root {
+    @apply text-xs font-medium text-gray-700;
+    transform: translate(12px, 4px) scale(1);
 }
 
-.mantine-TextInput-wrapper,
-.mantine-DateInput-wrapper {
-    @apply relative;
-}
-
-.mantine-TextInput-asterisk {
-    @apply text-red-500;
-}
-
-/* Disable default Mantine filled variant hover effect */
-.mantine-TextInput-input:hover,
-.mantine-DateInput-input:hover {
-    @apply bg-gray-100;
-}
-
-/* Multiline input for Remarks */
-.mantine-TextInput-input[data-multiline] {
-    @apply h-8;
-    padding: 6px 12px;
+.MuiDialogContent-root .MuiInputLabel-shrink {
+    transform: translate(12px, -6px) scale(0.75);
 }
 
 /* Form buttons */
@@ -276,35 +227,23 @@
         @apply p-2;
     }
 
-    .mantine-TextInput-input,
-    .mantine-DateInput-input {
+    .MuiDialogContent-root .MuiInputBase-root {
         @apply text-xs h-7;
-    }
-
-    .mantine-TextInput-input[data-multiline] {
-        @apply h-7;
-        padding: 5px 10px;
-    }
-
-    .mantine-TextInput-label,
-    .mantine-DateInput-label {
-        @apply text-xs;
-    }
-
-    .mantine-TextInput-description,
-    .mantine-DateInput-description {
-        @apply text-xs;
     }
 
     .action-btn {
         @apply text-xs h-6;
     }
-
-    .form-section {
-        @apply mb-4 p-3;
-    }
-
-    .form-section-title {
-        @apply text-xs py-2 px-3 mb-2;
-    }
 }
+
+.section-header-wrapper {
+    background-color: inherit;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+.bg-blue-100 { background-color: #E3F2FD; }
+.bg-green-100 { background-color: #E3F2FD; }
+.bg-yellow-100 { background-color: #E3F2FD; }
+.bg-purple-100 { background-color: #E3F2FD; }
+.bg-orange-100 { background-color: #E3F2FD; }
